@@ -164,7 +164,7 @@ async function playOption3() {
 // ---- FUNCIÓN DE LLUVIA DINÁMICA MEJORADA ----
 // Ahora recibe un array y elige un elemento al azar para cada "gota"
 function createRain(emojis) {
-    const totalItems = 60; // Subí un poquito la cantidad para que se vea más festivo
+    const totalItems = 60; 
     for (let i = 0; i < totalItems; i++) {
         setTimeout(() => {
             const item = document.createElement('div');
