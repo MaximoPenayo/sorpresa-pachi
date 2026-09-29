@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorpresa para Pachi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Contenedor para la lluvia de emojis -->
+    <div id="rain-container"></div>
+
+    <div id="container">
+        <div id="message-container">
+            <!-- Textos de la secuencia inicial -->
+            <h1 id="text-1" class="hidden">¡Hola Pachi! ❤️</h1>
+            <h1 id="text-2" class="hidden">Tengo una propuesta para hacerte...</h1>
+            <h1 id="text-3" class="hidden">¿Te imaginas lo que es?</h1>
+            
+            <!-- Secuencia Opción 1 (Minecraft) -->
+            <h1 id="text-smart" class="hidden final-message">¡Qué inteligente que sos... 🎉</h1>
+            <h1 id="text-like" class="hidden final-message text-top">...por eso me gustas!</h1>
+            <img id="img-minecraft" class="hidden final-img img-center" src="imagen1.jpg" alt="US?">
+            
+            <h1 id="text-then" class="hidden final-message text-top">Entonces... <br><br> ¿Querés jugar minecraft(pedro) conmigo?</h1>
+            <img id="img-dog" class="hidden final-img img-center" src="imagen2.jpg" alt="Perrito sonriendo">
+
+            <!-- Secuencia Opción 2 (Moto) -->
+            <h1 id="text-moto1" class="hidden final-message" style="line-height: 1.8;">Realmente la pagina era para invitarte a jugar minecraft nomas pero sobre la marcha se me ocurrio añadir esta opcion jaja</h1>
+            <h1 id="text-moto2" class="hidden final-message text-top" style="line-height: 1.8;">Pero bueno cualquier plan con vos me hace feliz, y mas si involucra andar en moto OwO</h1>
+            
+            <!-- Secuencia Opción 3 (Todas son correctas) -->
+            <h1 id="text-excellent" class="hidden final-message text-top">¡Excelente Elección! 🎊🎉</h1>
+            <img id="img-combo" class="hidden final-img img-center" src="imagen5.jpg" alt="Steve en Moto">
+        </div>
+        
+        <!-- Opciones Iniciales -->
+        <div id="options-container" class="hidden">
+            <button class="mc-button" onclick="playOption1()">Jugar Minecraft conmigo</button>
+            <button class="mc-button" onclick="playOption2()">Salir a pasear</button>
+            <button class="mc-button special" onclick="playOption3()">Todas son correctas</button>
+        </div>
+
+        <!-- Segundas Opciones de la Opción 1 -->
+        <div id="second-options-container" class="hidden">
+            <button class="mc-button" onclick="playFinalOption()" style="width: 200px; margin: 10px;">Obvio que si</button>
+            <button id="btn-troll" class="mc-button" style="width: 200px; margin: 10px;">Nao Nao</button>
+        </div>
+
+        <!-- Botón Final (WhatsApp Opción 1) -->
+        <a id="btn-whatsapp-1" href="https://wa.me/message/USPV5XVKKSQKE1" target="_blank" class="mc-button special hidden btn-center">Confirmar seleccion</a>
+
+        <!-- Botón Final (WhatsApp Opción 2) -->
+        <div id="final-moto-container" class="hidden btn-center" style="display: flex; flex-direction: column; align-items: center; width: 100%;">
+            <a href="https://wa.me/5493794936259?text=Hola%20Penaio%F0%9F%91%8B%F0%9F%8F%BB%20Si%20quiero%20salir%20a%20pasear%20contigo%20UwU%F0%9F%8F%8D%EF%B8%8F%F0%9F%91%89%F0%9F%8F%BB%F0%9F%91%88%F0%9F%8F%BB" target="_blank" class="mc-button special" style="text-decoration: none; box-sizing: border-box; text-align: center;">Confirmar Seleccion</a>
+            <p class="small-text">Unicamente valido si me abrazas</p>
+        </div>
+
+        <!-- Botón Final (WhatsApp Opción 3) -->
+        <div id="final-combo-container" class="hidden btn-center" style="display: flex; flex-direction: column; align-items: center; width: 100%; top: 75%;">
+            <a href="https://wa.me/5493794936259?text=Hola%20Penaio%F0%9F%91%8B%F0%9F%8F%BB%20Si%20quiero%20jugar%20Minecraft%20contigo%20y%20tambien%20salir%20a%20pasear%20UwU%F0%9F%8F%8D%EF%B8%8F%F0%9F%91%89%F0%9F%8F%BB%F0%9F%91%88%F0%9F%8F%BB" target="_blank" class="mc-button special" style="text-decoration: none; box-sizing: border-box; text-align: center;">Confirmar Seleccion</a>
+        </div>
+    </div>
+
+    <!-- Footer especial (Mensaje romántico) -->
+    <div class="footer-text">
+        Me dijiste que deje de gastar en regalos o detalles, asi que ta bien, pero para mi no es un impedimento para demostrarte cuando me gustas y cuanto te quiero owo
+    </div>
+
+    <!-- Modal (ya no se usa mucho pero lo dejamos por si acaso) -->
+    <div id="modal" class="hidden">
+        <div class="modal-content">
+            <p id="modal-text"></p>
+            <button class="mc-button" onclick="closeModal()">Aceptar</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
